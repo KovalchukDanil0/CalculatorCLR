@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include<string>
+#include <iostream>
 
 namespace CalculatorCLR {
 
@@ -404,52 +404,52 @@ namespace CalculatorCLR {
 
 	private: System::Void button0_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("0");
+		AddText(0);
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("1");
+		AddText(1);
 	}
 
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("2");
+		AddText(2);
 	}
 
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("3");
+		AddText(3);
 	}
 
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("4");
+		AddText(4);
 	}
 
 	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("5");
+		AddText(5);
 	}
 
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("6");
+		AddText(6);
 	}
 
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("7");
+		AddText(7);
 	}
 
 	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("8");
+		AddText(8);
 	}
 
 	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText("9");
+		AddText(9);
 	}
 
 	private: System::Void buttonDot_Click(System::Object^ sender, System::EventArgs^ e)
@@ -477,9 +477,47 @@ namespace CalculatorCLR {
 		AddText("/");
 	}
 
+	private: System::Void buttonBackspace_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		String^ s = richTextBox->Text;
+
+		if (s->Length > 1)
+		{
+			s = s->Substring(0, s->Length - 1);
+		}
+		else
+		{
+			s = "0";
+		}
+
+		richTextBox->Text = s;
+	}
+
+	private: System::Void buttonC_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		richTextBox->Text = "0";
+		labelHistory->Text = "";
+		lastNum = 0;
+	}
+
+	private: System::Void buttonCE_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		richTextBox->Text = "0";
+	}
+
+	private: System::Void buttonPlusAndMinus_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		
+	}
+
+	private: System::Void buttonEquals_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		Calculate("=");
+	}
+
 	private: void AddText(String^ text)
 	{
-		String^ newText;
+		/*String^ newText;
 
 		if (richTextBox->Text->Length == 1)
 		{
@@ -504,92 +542,51 @@ namespace CalculatorCLR {
 			newText = richTextBox->Text + text;
 		}
 
-		richTextBox->Text = newText;
+		richTextBox->Text = newText;*/
+
+		richTextBox->Text += text;
+
+		if (text == "+")
+		{
+
+		}
 	}
 
-	private: System::Void buttonBackspace_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		String^ s = richTextBox->Text;
+	private: long long lastNum = 0;
+	private: long long thisNum = 0;
 
-		if (s->Length > 1)
+	private: void AddText(long long num)
+	{
+		if (richTextBox->Text->Length == 1)
 		{
-			s = s->Substring(0, s->Length - 1);
+			if (richTextBox->Text == "0")
+			{
+				richTextBox->Text = num.ToString();
+			}
+			else
+			{
+				richTextBox->Text += num;
+			}
 		}
 		else
 		{
-			s = "0";
+			richTextBox->Text += num;
 		}
 
-		richTextBox->Text = s;
-	}
-
-	private: System::Void buttonC_Click(System::Object^ sender, System::EventArgs^ e) 
-	{
-		richTextBox->Text = "0";
-		labelHistory->Text = "0";
-	}
-
-	private: System::Void buttonCE_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		richTextBox->Text = "0";
-	}
-
-	private: System::Void buttonPlusAndMinus_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		
-	}
-
-	private: System::Void buttonEquals_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		String^ str1 = "";
-		String^ str2 = "";
-		float num = 0;
-
-		labelHistory->Text = richTextBox->Text;
-
-		for (int i = 0; i < richTextBox->Text->Length; i++)
+		try
 		{
-			if (richTextBox->Text[i] == '.')
-			{
-				continue;
-			}
-
-			if (richTextBox->Text[i] == '+')
-			{
-				num += Convert::ToSingle(str1);
-				str1 = "";
-
-				continue;
-			}
-
-			if (richTextBox->Text[i] == '-')
-			{
-				num -= Convert::ToSingle(str1);
-				str1 = "";
-
-				continue;
-			}
-
-			if (richTextBox->Text[i] == '*')
-			{
-				num *= Convert::ToSingle(str1);
-				str1 = "";
-
-				continue;
-			}
-
-			if (richTextBox->Text[i] == '/')
-			{
-				num /= Convert::ToSingle(str1);
-				str1 = "";
-
-				continue;
-			}
-
-			str1 += richTextBox->Text[i];
+			lastNum = Convert::ToInt64(lastNum.ToString() + num);
+			labelHistory->Text = lastNum.ToString();
 		}
+		catch(...)
+		{
+			richTextBox->Text = "number is too long";
+		}
+	}
 
-		richTextBox->Text = num.ToString();
+	private: void Calculate(String^ text)
+	{
+
 	}
 };
 }
