@@ -1,7 +1,5 @@
 ﻿#pragma once
 
-#include <iostream>
-
 namespace CalculatorCLR {
 
 	using namespace System;
@@ -75,6 +73,7 @@ namespace CalculatorCLR {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -101,7 +100,7 @@ namespace CalculatorCLR {
 			// 
 			// button1
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->Location = System::Drawing::Point(15, 244);
 			this->button1->Name = L"button1";
@@ -109,11 +108,11 @@ namespace CalculatorCLR {
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"1";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button2
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button2->Location = System::Drawing::Point(71, 244);
 			this->button2->Name = L"button2";
@@ -121,11 +120,11 @@ namespace CalculatorCLR {
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"2";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button3
 			// 
-			this->button3->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button3->Location = System::Drawing::Point(127, 244);
 			this->button3->Name = L"button3";
@@ -133,11 +132,11 @@ namespace CalculatorCLR {
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"3";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button4
 			// 
-			this->button4->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button4->Location = System::Drawing::Point(15, 188);
 			this->button4->Name = L"button4";
@@ -145,11 +144,11 @@ namespace CalculatorCLR {
 			this->button4->TabIndex = 4;
 			this->button4->Text = L"4";
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button5
 			// 
-			this->button5->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button5->Location = System::Drawing::Point(71, 188);
 			this->button5->Name = L"button5";
@@ -157,11 +156,11 @@ namespace CalculatorCLR {
 			this->button5->TabIndex = 5;
 			this->button5->Text = L"5";
 			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button6
 			// 
-			this->button6->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button6->Location = System::Drawing::Point(127, 188);
 			this->button6->Name = L"button6";
@@ -169,11 +168,11 @@ namespace CalculatorCLR {
 			this->button6->TabIndex = 6;
 			this->button6->Text = L"6";
 			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button7
 			// 
-			this->button7->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button7->Location = System::Drawing::Point(15, 132);
 			this->button7->Name = L"button7";
@@ -181,11 +180,11 @@ namespace CalculatorCLR {
 			this->button7->TabIndex = 7;
 			this->button7->Text = L"7";
 			this->button7->UseVisualStyleBackColor = true;
-			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button8
 			// 
-			this->button8->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button8->Location = System::Drawing::Point(71, 132);
 			this->button8->Name = L"button8";
@@ -193,11 +192,11 @@ namespace CalculatorCLR {
 			this->button8->TabIndex = 8;
 			this->button8->Text = L"8";
 			this->button8->UseVisualStyleBackColor = true;
-			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button9
 			// 
-			this->button9->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button9->Location = System::Drawing::Point(127, 132);
 			this->button9->Name = L"button9";
@@ -205,11 +204,11 @@ namespace CalculatorCLR {
 			this->button9->TabIndex = 9;
 			this->button9->Text = L"9";
 			this->button9->UseVisualStyleBackColor = true;
-			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// button0
 			// 
-			this->button0->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button0->Location = System::Drawing::Point(15, 300);
 			this->button0->Name = L"button0";
@@ -217,11 +216,11 @@ namespace CalculatorCLR {
 			this->button0->TabIndex = 0;
 			this->button0->Text = L"0";
 			this->button0->UseVisualStyleBackColor = true;
-			this->button0->Click += gcnew System::EventHandler(this, &MyForm::button0_Click);
+			this->button0->Click += gcnew System::EventHandler(this, &MyForm::NumberButtons);
 			// 
 			// buttonCE
 			// 
-			this->buttonCE->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonCE->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonCE->Location = System::Drawing::Point(71, 76);
 			this->buttonCE->Name = L"buttonCE";
@@ -233,7 +232,7 @@ namespace CalculatorCLR {
 			// 
 			// buttonBackspace
 			// 
-			this->buttonBackspace->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonBackspace->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonBackspace->Location = System::Drawing::Point(15, 76);
 			this->buttonBackspace->Name = L"buttonBackspace";
@@ -245,7 +244,7 @@ namespace CalculatorCLR {
 			// 
 			// buttonC
 			// 
-			this->buttonC->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonC->Location = System::Drawing::Point(127, 76);
 			this->buttonC->Name = L"buttonC";
@@ -257,19 +256,19 @@ namespace CalculatorCLR {
 			// 
 			// buttonDot
 			// 
-			this->buttonDot->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDot->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDot->Location = System::Drawing::Point(71, 300);
 			this->buttonDot->Name = L"buttonDot";
 			this->buttonDot->Size = System::Drawing::Size(50, 50);
 			this->buttonDot->TabIndex = 13;
-			this->buttonDot->Text = L".";
+			this->buttonDot->Text = L",";
 			this->buttonDot->UseVisualStyleBackColor = true;
 			this->buttonDot->Click += gcnew System::EventHandler(this, &MyForm::buttonDot_Click);
 			// 
 			// buttonEquals
 			// 
-			this->buttonEquals->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonEquals->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonEquals->Location = System::Drawing::Point(127, 300);
 			this->buttonEquals->Name = L"buttonEquals";
@@ -281,7 +280,7 @@ namespace CalculatorCLR {
 			// 
 			// buttonSlash
 			// 
-			this->buttonSlash->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonSlash->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonSlash->Location = System::Drawing::Point(183, 300);
 			this->buttonSlash->Name = L"buttonSlash";
@@ -289,11 +288,11 @@ namespace CalculatorCLR {
 			this->buttonSlash->TabIndex = 15;
 			this->buttonSlash->Text = L"/";
 			this->buttonSlash->UseVisualStyleBackColor = true;
-			this->buttonSlash->Click += gcnew System::EventHandler(this, &MyForm::buttonSlash_Click);
+			this->buttonSlash->Click += gcnew System::EventHandler(this, &MyForm::AriithmeticOp);
 			// 
 			// buttonMultiply
 			// 
-			this->buttonMultiply->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonMultiply->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonMultiply->Location = System::Drawing::Point(183, 244);
 			this->buttonMultiply->Name = L"buttonMultiply";
@@ -302,11 +301,11 @@ namespace CalculatorCLR {
 			this->buttonMultiply->TabIndex = 16;
 			this->buttonMultiply->Text = L"*";
 			this->buttonMultiply->UseVisualStyleBackColor = true;
-			this->buttonMultiply->Click += gcnew System::EventHandler(this, &MyForm::buttonMultiply_Click);
+			this->buttonMultiply->Click += gcnew System::EventHandler(this, &MyForm::AriithmeticOp);
 			// 
 			// buttonMinus
 			// 
-			this->buttonMinus->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonMinus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonMinus->Location = System::Drawing::Point(183, 188);
 			this->buttonMinus->Name = L"buttonMinus";
@@ -314,11 +313,11 @@ namespace CalculatorCLR {
 			this->buttonMinus->TabIndex = 17;
 			this->buttonMinus->Text = L"-";
 			this->buttonMinus->UseVisualStyleBackColor = true;
-			this->buttonMinus->Click += gcnew System::EventHandler(this, &MyForm::buttonMinus_Click);
+			this->buttonMinus->Click += gcnew System::EventHandler(this, &MyForm::AriithmeticOp);
 			// 
 			// buttonPlus
 			// 
-			this->buttonPlus->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonPlus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonPlus->Location = System::Drawing::Point(183, 132);
 			this->buttonPlus->Name = L"buttonPlus";
@@ -326,11 +325,11 @@ namespace CalculatorCLR {
 			this->buttonPlus->TabIndex = 18;
 			this->buttonPlus->Text = L"+";
 			this->buttonPlus->UseVisualStyleBackColor = true;
-			this->buttonPlus->Click += gcnew System::EventHandler(this, &MyForm::buttonPlus_Click);
+			this->buttonPlus->Click += gcnew System::EventHandler(this, &MyForm::AriithmeticOp);
 			// 
 			// buttonPlusAndMinus
 			// 
-			this->buttonPlusAndMinus->Font = (gcnew System::Drawing::Font(L"Roboto Condensed", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonPlusAndMinus->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonPlusAndMinus->Location = System::Drawing::Point(183, 76);
 			this->buttonPlusAndMinus->Name = L"buttonPlusAndMinus";
@@ -346,6 +345,7 @@ namespace CalculatorCLR {
 				static_cast<System::Byte>(204)));
 			this->richTextBox->Location = System::Drawing::Point(15, 28);
 			this->richTextBox->Name = L"richTextBox";
+			this->richTextBox->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->richTextBox->Size = System::Drawing::Size(218, 42);
 			this->richTextBox->TabIndex = 20;
 			this->richTextBox->Text = L"0";
@@ -353,11 +353,11 @@ namespace CalculatorCLR {
 			// labelHistory
 			// 
 			this->labelHistory->AutoSize = true;
-			this->labelHistory->Location = System::Drawing::Point(12, 12);
+			this->labelHistory->Location = System::Drawing::Point(15, 12);
 			this->labelHistory->Name = L"labelHistory";
-			this->labelHistory->Size = System::Drawing::Size(13, 13);
+			this->labelHistory->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->labelHistory->Size = System::Drawing::Size(0, 13);
 			this->labelHistory->TabIndex = 21;
-			this->labelHistory->Text = L"0";
 			// 
 			// MyForm
 			// 
@@ -387,117 +387,95 @@ namespace CalculatorCLR {
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->buttonEquals);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"CalculatorCLR";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
+
+		double firstNum, secondNum, answer;
+		String^ charOp;
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
 
 	}
 
-	private: System::Void button0_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void NumberButtons(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText(0);
+		Button^ but = safe_cast<Button^>(sender);
+
+		if (richTextBox->Text == "0")
+		{
+			richTextBox->Text = but->Text;
+		}
+		else
+		{
+			richTextBox->Text += but->Text;
+		}
 	}
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void AriithmeticOp(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText(1);
-	}
+		Button^ but = safe_cast<Button^>(sender);
 
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(2);
-	}
+		charOp = but->Text;
 
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(3);
-	}
+		try
+		{
+			firstNum = Convert::ToDouble(richTextBox->Text);
+		}
+		catch (...)
+		{
+			ClearAll();
+			MessageBox::Show("Some error occured", "ERROR", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
 
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(4);
-	}
-
-	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(5);
-	}
-
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(6);
-	}
-
-	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(7);
-	}
-
-	private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(8);
-	}
-
-	private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText(9);
+		richTextBox->Text = "";
+		labelHistory->Text = firstNum.ToString() + " " + charOp;
 	}
 
 	private: System::Void buttonDot_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		AddText(".");
-	}
-
-	private: System::Void buttonPlus_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText("+");
-	}
-
-	private: System::Void buttonMinus_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText("-");
-	}
-
-	private: System::Void buttonMultiply_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText("*");
-	}
-
-	private: System::Void buttonSlash_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		AddText("/");
+		if (!richTextBox->Text->Contains(","))
+		{
+			richTextBox->Text += ",";
+		}
 	}
 
 	private: System::Void buttonBackspace_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		String^ s = richTextBox->Text;
+		String^ text = richTextBox->Text;
 
-		if (s->Length > 1)
+		if (text->Length > 1)
 		{
-			s = s->Substring(0, s->Length - 1);
+			text = text->Substring(0, text->Length - 1);
 		}
 		else
 		{
-			s = "0";
+			text = "0";
 		}
 
-		richTextBox->Text = s;
+		richTextBox->Text = text;
 	}
 
 	private: System::Void buttonC_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
+		ClearAll();
+	}
+
+	private: void ClearAll()
+	{
 		richTextBox->Text = "0";
 		labelHistory->Text = "";
-		lastNum = 0;
+
+		firstNum = 0;
+		secondNum = 0;
 	}
 
 	private: System::Void buttonCE_Click(System::Object^ sender, System::EventArgs^ e)
@@ -507,86 +485,54 @@ namespace CalculatorCLR {
 
 	private: System::Void buttonPlusAndMinus_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		
+		String^ text = richTextBox->Text;
+
+		if (text == "0")
+			return;
+
+		if (text->Contains("-"))
+		{
+			text = text->Remove(0, 1);
+		}
+		else
+		{
+			text = "-" + text;
+		}
+
+		richTextBox->Text = text;
 	}
 
 	private: System::Void buttonEquals_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		Calculate("=");
-	}
-
-	private: void AddText(String^ text)
-	{
-		/*String^ newText;
-
-		if (richTextBox->Text->Length == 1)
-		{
-			if (richTextBox->Text == "0")
-			{
-				if (text == "." || text == "+" || text == "/" || text == "*" || text == "-")
-				{
-					newText = richTextBox->Text + text;
-				}
-				else
-				{
-					newText = text;
-				}
-			}
-			else
-			{
-				newText = richTextBox->Text + text;
-			}
-		}
-		else
-		{
-			newText = richTextBox->Text + text;
-		}
-
-		richTextBox->Text = newText;*/
-
-		richTextBox->Text += text;
-
-		if (text == "+")
-		{
-
-		}
-	}
-
-	private: long long lastNum = 0;
-	private: long long thisNum = 0;
-
-	private: void AddText(long long num)
-	{
-		if (richTextBox->Text->Length == 1)
-		{
-			if (richTextBox->Text == "0")
-			{
-				richTextBox->Text = num.ToString();
-			}
-			else
-			{
-				richTextBox->Text += num;
-			}
-		}
-		else
-		{
-			richTextBox->Text += num;
-		}
-
 		try
 		{
-			lastNum = Convert::ToInt64(lastNum.ToString() + num);
-			labelHistory->Text = lastNum.ToString();
+			secondNum = Convert::ToDouble(richTextBox->Text);
 		}
-		catch(...)
+		catch (...)
 		{
-			richTextBox->Text = "number is too long";
+			ClearAll();
+			MessageBox::Show("Some error occured", "ERROR", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
-	}
 
-	private: void Calculate(String^ text)
-	{
+		char charOpTemp = charOp[0];
+		switch (charOpTemp)
+		{
+		case '+':
+			answer = firstNum + secondNum;
+			break;
+		case '-':
+			answer = firstNum - secondNum;
+			break;
+		case '*':
+			answer = firstNum * secondNum;
+			break;
+		case '/':
+			answer = firstNum / secondNum;
+			break;
+		}
 
+		richTextBox->Text = answer.ToString();
+		labelHistory->Text = firstNum.ToString() + " " + charOp + " " + secondNum.ToString();
 	}
 };
 }

@@ -1,3 +1,4 @@
 ﻿  MyForm.cpp
+D:\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\MyForm.h(517,19): warning C4244: инициализация: преобразование "wchar_t" в "char", возможна потеря данных
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
-  CalculatorCLR.vcxproj -> D:\Даник\Projects\VisualStudio\C++\CalculatorCLR\x64\Debug\CalculatorCLR.exe
+  CalculatorCLR.vcxproj -> D:\Projects\VisualStudio\C++\CalculatorCLR\x64\Debug\CalculatorCLR.exe
