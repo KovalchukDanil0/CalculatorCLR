@@ -1,8 +1,0 @@
-D:\Даник\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.vcxproj.AssemblyReference.cache
-D:\Даник\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.vcxproj.SuggestedBindingRedirects.cache
-D:\Даник\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.MyForm.resources
-D:\Даник\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.vcxproj.GenerateResource.cache
-D:\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.vcxproj.AssemblyReference.cache
-D:\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.vcxproj.SuggestedBindingRedirects.cache
-D:\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.MyForm.resources
-D:\Projects\VisualStudio\C++\CalculatorCLR\CalculatorCLR\x64\Debug\CalculatorCLR.vcxproj.GenerateResource.cache
